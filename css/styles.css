@@ -3856,6 +3856,48 @@ textarea.form-control-lg {
   overflow-y: auto;
 }
 
+/* Add this at the end of your styles.css file */
+
+/* Styles for mobile view */
+@media (max-width: 767.98px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa;
+  }
+
+  /* Adjust the image size in the navbar */
+  .navbar-brand img {
+    max-width: 140px;
+    /* Adjust the size as needed */
+    height: auto;
+  }
+
+  /* Add padding-top to the body to avoid content hiding under the navbar */
+  body {
+    padding-top: 56px;
+    /* Adjust based on the height of your navbar */
+  }
+
+  /* Ensure the navbar items fit in one line */
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+    /* Adjust spacing as needed */
+    margin-right: 10px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
+
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
@@ -3962,6 +4004,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.50rem;
+      /* Adjust the size as needed, e.g., 1.25rem for larger text */
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
   }
